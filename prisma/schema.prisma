@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sessions  TranscriptSession[]
+  notes     Note[]
+}
+
+model TranscriptSession {
+  id             String             @id @default(cuid())
+  userId         String
+  title          String
+  createdAt      DateTime           @default(now())
+  durationMs     Int?
+  languageSource String
+  languageTarget String?
+  // Store mode as a simple string ("captions" | "translate") for SQLite compatibility.
+  mode           String
+  // Comma-separated tags for SQLite compatibility (no primitive lists).
+  tags           String?
+
+  user      User               @relation(fields: [userId], references: [id])
+  segments  TranscriptSegment[]
+  notes     Note[]
+}
+
+model TranscriptSegment {
+  id            String   @id @default(cuid())
+  sessionId     String
+  startTimeMs   Int
+  endTimeMs     Int
+  speakerLabel  String?
+  originalText  String
+  translatedText String?
+  confidence    Float?
+
+  session TranscriptSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  sessionId String
+  userId    String?
+  text      String
+  createdAt DateTime @default(now())
+
+  session TranscriptSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  user    User?             @relation(fields: [userId], references: [id])
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  fromName  String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+}
