@@ -6,8 +6,8 @@ export default function AppDashboardPage() {
   return (
     <>
       <PageHeader
-        title="Welcome to NeuroAssist"
-        description="Quickly jump into live captions, see recent transcripts, and check your device status."
+        title="Welcome to NeuroAssist!"
+        description="NeuroAssit allows you to quickly access live captions, see recent transcripts, and translate speech right on the web."
       />
 
       <div className="grid gap-4 md:grid-cols-[minmax(0,2fr),minmax(0,1.5fr)]">
@@ -26,9 +26,9 @@ export default function AppDashboardPage() {
                 </Link>
                 .
               </li>
-              <li>Press Space to start or pause listening.</li>
-              <li>Press Ctrl/Cmd+S to save a session.</li>
-              <li>Visit Settings to tune fonts, contrast, and shortcuts.</li>
+              <li>You can press Space to start or pause live listening.</li>
+              <li>You can press Ctrl/Cmd+S to save a live translation session.</li>
+              <li>You can visit the Settings page to change fonts, contrast colors, shortcuts and more.</li>
             </ol>
           </CardContent>
         </Card>
@@ -45,8 +45,8 @@ export default function AppDashboardPage() {
               start captions.
             </p>
             <p>
-              For the most reliable experience, we recommend using Chrome on
-              desktop with a wired or high‑quality Bluetooth headset.
+              For the most reliable experience, we at NeuroAssit recommend using Chrome on
+              desktop with a wired or high‑quality headset.
             </p>
           </CardContent>
         </Card>
