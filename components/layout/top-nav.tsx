@@ -17,12 +17,9 @@ export function TopNav() {
   ];
 
   const appLinks = [
-    { href: "/app", label: "Dashboard" },
     { href: "/app/captions", label: "Captions" },
-    { href: "/app/translate", label: "Translate" },
-    { href: "/app/transcripts", label: "Transcripts" },
-    { href: "/app/settings", label: "Settings" },
-    { href: "/app/help", label: "Help" }
+    { href: "/app/transcripts", label: "History" },
+    { href: "/app/settings", label: "Settings" }
   ];
 
   return (

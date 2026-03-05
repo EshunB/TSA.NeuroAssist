@@ -203,7 +203,7 @@ export default function LiveCaptionsPage() {
             )}
             <div
               ref={scrollRef}
-              className="flex-1 space-y-2 overflow-auto rounded-md border border-slate-200 bg-slate-50 p-3 text-sm leading-relaxed"
+              className="flex-1 space-y-4 overflow-auto rounded-xl border border-slate-200 bg-slate-50/50 p-6 text-lg leading-relaxed"
               aria-label="Live captions"
             >
               {segments.length === 0 && (
@@ -217,12 +217,14 @@ export default function LiveCaptionsPage() {
               {segments.map((segment) => (
                 <div
                   key={segment.id}
-                  className="rounded-md bg-white px-2 py-1.5 shadow-sm shadow-slate-200 ring-1 ring-slate-200"
+                  className="rounded-xl bg-white p-6 shadow-md shadow-slate-200 ring-1 ring-slate-200"
                 >
-                  <p className="text-slate-900">{segment.text}</p>
+                  <p className="text-2xl font-medium leading-relaxed text-slate-900">
+                    {segment.text}
+                  </p>
                   {typeof segment.confidence === "number" && (
-                    <p className="mt-0.5 text-[10px] text-slate-500">
-                      Confidence: {(segment.confidence * 100).toFixed(0)}%
+                    <p className="mt-2 text-xs font-medium text-slate-400">
+                      Accuracy: {(segment.confidence * 100).toFixed(0)}%
                     </p>
                   )}
                 </div>
@@ -231,17 +233,17 @@ export default function LiveCaptionsPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 bg-white text-slate-900">
-          <CardHeader>
-            <CardTitle className="text-sm font-medium text-slate-900">
-              Session summary
+        <Card className="border-slate-200 bg-white shadow-sm">
+          <CardHeader className="pb-4 border-b border-slate-100">
+            <CardTitle className="text-base font-semibold text-slate-900">
+              Session Settings
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3 text-xs text-slate-700">
-            <div className="flex items-center justify-between text-xs">
-              <span>Language</span>
+          <CardContent className="space-y-6 pt-6 text-sm text-slate-600">
+            <div className="space-y-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Language</label>
               <select
-                className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-900"
+                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900"
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
                 aria-label="Caption language"
@@ -252,9 +254,9 @@ export default function LiveCaptionsPage() {
                 <option value="fr-FR">French</option>
               </select>
             </div>
-            <div className="flex items-center justify-between text-xs">
-              <span>Segments</span>
-              <span className="font-semibold text-slate-900">
+            <div className="flex items-center justify-between border-t border-slate-100 pt-4">
+              <span className="font-medium">Total Segments</span>
+              <span className="text-lg font-bold text-slate-900">
                 {segments.length}
               </span>
             </div>

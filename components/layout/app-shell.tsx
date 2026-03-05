@@ -4,15 +4,14 @@ import { TopNav } from "@/components/layout/top-nav";
 
 export function AppShell({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
+    <div className="flex min-h-screen flex-col bg-white text-slate-900">
       <TopNav />
-      <div className="flex flex-1">
-        <Sidebar />
+      <div className="flex flex-1 justify-center">
         <main
           id="main-content"
-          className="flex-1 border-l border-slate-200 bg-slate-50 px-4 py-4 lg:px-8"
+          className="w-full max-w-5xl px-6 py-8 lg:px-12"
         >
-          <div className="mx-auto max-w-6xl space-y-4">{children}</div>
+          <div className="space-y-8">{children}</div>
         </main>
       </div>
     </div>
