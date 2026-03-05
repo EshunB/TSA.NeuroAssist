@@ -1,7 +1,7 @@
 # NeuroAssist – Live Captions Dashboard
 
-NeuroAssist is a web dashboard that turns speech into large, easy‑to‑read captions in real time.  
-It is designed for hearing‑impaired users and runs locally in your browser on a laptop or desktop.
+NeuroAssist is a web dashboard app that turns speech into easy‑to‑read captions in real time from the microphone.
+NeuroAssist is designed for hearing‑impaired users and runs locally in your browser on a laptop or desktop.
 
 ## Features
 
