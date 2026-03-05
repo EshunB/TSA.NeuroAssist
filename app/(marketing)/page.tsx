@@ -8,10 +8,6 @@ const features = [
     body: "Continuous, low-latency captions tuned for conversations, meetings, and lectures."
   },
   {
-    title: "Optional live translation",
-    body: "See a second language alongside your captions using a pluggable translation engine."
-  },
-  {
     title: "Accessibility-first design",
     body: "High contrast themes, adjustable font sizes, and keyboard-friendly controls everywhere."
   },
@@ -36,7 +32,6 @@ export default function LandingPage() {
           <p className="max-w-xl text-base leading-relaxed text-slate-700">
             NeuroAssist listens through your laptop microphone and renders
             speech as large, legible captions you can follow at your own pace.
-            Add live translation when you need to cross language barriers.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -79,9 +74,10 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="rounded-md bg-slate-50 px-3 py-2 text-[11px] text-slate-700">
-              <p className="font-semibold text-slate-900">Translate column</p>
+              <p className="font-semibold text-slate-900">Comfort view</p>
               <p className="mt-1">
-                “Hola, ¿cómo estás hoy?” → <span className="text-emerald-300">“Hi, how are you today?”</span>
+                Wide, high-contrast captions designed so you can sit back and
+                read along comfortably.
               </p>
             </div>
           </CardContent>

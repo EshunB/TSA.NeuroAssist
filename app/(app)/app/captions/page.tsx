@@ -20,6 +20,9 @@ export default function LiveCaptionsPage() {
   const [segments, setSegments] = useState<UiSegment[]>([]);
   const [isSaving, setIsSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">(
+    "idle"
+  );
 
   const isListening = provider.status === "listening";
   const isUnsupported = provider.status === "unsupported";
@@ -59,6 +62,26 @@ export default function LiveCaptionsPage() {
     () => segments.map((s) => s.text).join(" "),
     [segments]
   );
+
+  const sessionLengthSeconds = useMemo(() => {
+    if (segments.length < 2) return 0;
+    const first = segments[0];
+    const last = segments[segments.length - 1];
+    if (!first || !last) return 0;
+    return Math.max(0, (last.endTimeMs - first.startTimeMs) / 1000);
+  }, [segments]);
+
+  const handleCopy = async () => {
+    if (!fullText || !navigator.clipboard) return;
+    try {
+      await navigator.clipboard.writeText(fullText);
+      setCopyStatus("copied");
+      window.setTimeout(() => setCopyStatus("idle"), 2000);
+    } catch {
+      setCopyStatus("error");
+      window.setTimeout(() => setCopyStatus("idle"), 4000);
+    }
+  };
 
   const handleSave = async () => {
     if (!segments.length || isSaving) return;
@@ -168,6 +191,18 @@ export default function LiveCaptionsPage() {
             >
               {isSaving ? "Saving…" : "Save session (Ctrl/Cmd+S)"}
             </Button>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={handleCopy}
+              disabled={!fullText}
+            >
+              {copyStatus === "copied"
+                ? "Copied"
+                : copyStatus === "error"
+                ? "Copy failed"
+                : "Copy text"}
+            </Button>
           </div>
         }
       />
@@ -260,6 +295,14 @@ export default function LiveCaptionsPage() {
                 {segments.length}
               </span>
             </div>
+            {sessionLengthSeconds > 0 && (
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-slate-700">Session length</span>
+                <span className="text-sm font-semibold text-slate-900">
+                  ~{Math.round(sessionLengthSeconds)}s
+                </span>
+              </div>
+            )}
             <div className="space-y-1.5">
               <p className="text-xs font-medium text-slate-900">
                 Keyboard shortcuts
@@ -303,6 +346,10 @@ export default function LiveCaptionsPage() {
                   </span>
                 )}
               </div>
+              <p className="mt-1 text-[11px] text-slate-500">
+                Use the <span className="font-semibold">Copy text</span> button
+                above to copy everything from this session.
+              </p>
             </div>
           </CardContent>
         </Card>

@@ -1,11 +1,11 @@
 # NeuroAssist – The Dashboard for Live Captions for Hearing-Impaired
 
-NeuroAssist is a web dashboard intended to provide real time speech to text captions for hearing impred users. NeuroAssist works right on your laptop, in an aim to help make life easier for you.
+NeuroAssist is a web dashboard intended to provide real time speech to text captions for hearing impaired users. NeuroAssist works right on your laptop to make everyday listening a little easier.
 
 ## Features
 
-- **Live Speech to Text Captions** – NeuroAssist provides real time captions for hearing impaired using Web Speech API.
-- **Transcript Management** – NeuroAssist allows you to save, search, tag, and export translate and caption sessions.
+- **Live Speech to Text Captions** – NeuroAssist provides real time captions for hearing impaired users using the Web Speech API.
+- **Transcript Management** – NeuroAssist allows you to save, search, and export caption sessions.
 - **WCAG Accessible** – NeuroAssist was built with an accessibility-first design in mind.
 - **Responsive Focused** – NeuroAssist works on laptop, tablet, and desktop devices. 
 - **Focused on Privacy First** – NeuroAssist has a Local-only mode available, keeping your safety in mind.
@@ -22,8 +22,8 @@ NeuroAssist is a web dashboard intended to provide real time speech to text capt
 # Open your laptops terminal. 
 
 # Clone the GitHub Repository.
-git clone https://github.com/EshunB/SoftwareDevelopment.git
-cd neuroassist
+git clone https://github.com/EshunB/TSA.NeuroAssist.git
+cd TSA.NeuroAssist
 
 # Install the dependencies on your laptop.
 npm install

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const settingsLinks = [
   { href: "/app/settings/audio", label: "Audio", description: "Microphone selection and capture options." },
-  { href: "/app/settings/translation", label: "Translation", description: "Default languages and provider." },
+  { href: "/app/settings/translation", label: "Display", description: "Caption layout, size, and appearance." },
   { href: "/app/settings/accessibility", label: "Accessibility", description: "Fonts, contrast, and caption styles." },
   { href: "/app/settings/privacy", label: "Privacy", description: "Data retention and local-only mode." },
   { href: "/app/settings/shortcuts", label: "Shortcuts", description: "Keyboard shortcuts and customization." },

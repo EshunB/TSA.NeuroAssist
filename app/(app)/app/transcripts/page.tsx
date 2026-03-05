@@ -54,8 +54,8 @@ export default function TranscriptsPage() {
           )}
           {!isLoading && !error && sessions.length === 0 && (
             <p className="text-slate-600">
-              No transcripts yet. Save a session from Live Captions or Live
-              Translate to see it here.
+              No transcripts yet. Save a session from Live Captions to see it
+              here.
             </p>
           )}
           <ul className="space-y-2">
