@@ -4,6 +4,7 @@ export type SpeechSegment = {
   confidence?: number;
   startTimeMs: number;
   endTimeMs: number;
+  speakerLabel?: string;
 };
 
 export type SpeechProviderStatus =

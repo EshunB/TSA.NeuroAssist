@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Sidebar } from "@/components/layout/sidebar";
 import { TopNav } from "@/components/layout/top-nav";
 
 export function AppShell({ children }: { children: ReactNode }) {

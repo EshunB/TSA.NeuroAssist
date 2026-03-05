@@ -18,16 +18,16 @@ export default function MarketingLayout({ children }: { children: ReactNode }) {
             <a href="/accessibility" className="hover:text-slate-900">
               Accessibility
             </a>
-            <a href="/privacy" className="hover:text-slate-100">
+            <a href="/privacy" className="hover:text-slate-900">
               Privacy
             </a>
-            <a href="/security" className="hover:text-slate-100">
+            <a href="/security" className="hover:text-slate-900">
               Security
             </a>
-            <a href="/docs" className="hover:text-slate-100">
+            <a href="/docs" className="hover:text-slate-900">
               Docs
             </a>
-            <a href="/contact" className="hover:text-slate-100">
+            <a href="/contact" className="hover:text-slate-900">
               Contact
             </a>
           </nav>

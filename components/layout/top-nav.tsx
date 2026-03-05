@@ -10,9 +10,7 @@ export function TopNav() {
 
   const marketingLinks = [
     { href: "/features", label: "Features" },
-    { href: "/pricing", label: "Pricing" },
     { href: "/about", label: "About" },
-    { href: "/docs", label: "Docs" },
     { href: "/contact", label: "Contact" }
   ];
 
