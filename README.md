@@ -1,36 +1,77 @@
-# NeuroAssist – The Dashboard for Live Captions for Hearing-Impaired
+# NeuroAssist – Live Captions Dashboard
 
-NeuroAssist is a web dashboard intended to provide real time speech to text captions for hearing impaired users. NeuroAssist works right on your laptop to make everyday listening a little easier.
+NeuroAssist is a web dashboard that turns speech into large, easy‑to‑read captions in real time.  
+It is designed for hearing‑impaired users and runs locally in your browser on a laptop or desktop.
 
 ## Features
 
-- **Live Speech to Text Captions** – NeuroAssist provides real time captions for hearing impaired users using the Web Speech API.
-- **Transcript Management** – NeuroAssist allows you to save, search, and export caption sessions.
-- **WCAG Accessible** – NeuroAssist was built with an accessibility-first design in mind.
-- **Responsive Focused** – NeuroAssist works on laptop, tablet, and desktop devices. 
-- **Focused on Privacy First** – NeuroAssist has a Local-only mode available, keeping your safety in mind.
+- **Live Speech‑to‑Text Captions** – Uses the browser’s Web Speech API to turn spoken words into text.
+- **Transcript History** – Save caption sessions, browse them later, and copy or export the text.
+- **Accessibility‑First** – High‑contrast captions, keyboard shortcuts, and a layout focused on readability.
+- **Privacy‑Focused** – Uses a local SQLite database; no external AI APIs or cloud services are required.
 
-## Set Up
+## How to run NeuroAssist on your laptop
 
-### Prerequisites Needed for NeuroAssist
+### Prerequisites
 - Node.js 18+
 - A modern browser (Chrome, Edge, or Safari)
 
-### Setup
+### 1. Clone this repository
 
 ```bash
-# Open your laptops terminal. 
+# Open your laptop's terminal.
 
-# Clone the GitHub Repository.
 git clone https://github.com/EshunB/TSA.NeuroAssist.git
 cd TSA.NeuroAssist
+```
 
-# Install the dependencies on your laptop.
+### 2. Install dependencies
+
+```bash
 npm install
+```
 
-# Setup the platform database.
-npm run db:push
-npm run db:seed
+### 3. Set up the local database
 
-# Start the platform development.
+This project uses a local SQLite database via Prisma. The following command
+creates (or updates) the database file based on `prisma/schema.prisma`:
+
+```bash
+npx prisma db push
+```
+
+You do **not** need any cloud database or API keys for the demo.
+
+### 4. Start the development server
+
+By default the app runs on port 5000:
+
+```bash
 npm run dev
+```
+
+Then open your browser to:
+
+```text
+http://localhost:5000
+```
+
+If port 5000 is already in use on your machine, you can instead run:
+
+```bash
+npx next dev -p 3000 -H 0.0.0.0
+```
+
+and open:
+
+```text
+http://localhost:3000
+```
+
+### 5. Using the app
+
+- From the landing page, click **“Open app”** in the top‑right.
+- On the **Dashboard**, follow the quick‑start steps and click **Live Captions**.
+- Grant microphone access in your browser when prompted.
+- Press **Space** to start/stop listening, and **Ctrl/Cmd + S** to save a session.
+
