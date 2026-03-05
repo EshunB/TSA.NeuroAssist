@@ -5,12 +5,10 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/app", label: "Dashboard" },
   { href: "/app/captions", label: "Live Captions" },
   { href: "/app/translate", label: "Live Translate" },
-  { href: "/app/transcripts", label: "Transcripts" },
-  { href: "/app/settings", label: "Settings" },
-  { href: "/app/help", label: "Help" }
+  { href: "/app/transcripts", label: "History" },
+  { href: "/app/settings", label: "Settings" }
 ];
 
 export function Sidebar() {

@@ -19,18 +19,18 @@ const bodySchema = z.object({
   segments: z.array(segmentSchema).min(1)
 });
 
-// For MVP we use a single demo user so the app runs without auth.
-const DEMO_USER_EMAIL = "demo@neuroassist.local";
+// Default user for local-first operation.
+const DEFAULT_USER_EMAIL = "user@neuroassist.local";
 
-async function getOrCreateDemoUser() {
+async function getOrCreateUser() {
   const existing = await prisma.user.findUnique({
-    where: { email: DEMO_USER_EMAIL }
+    where: { email: DEFAULT_USER_EMAIL }
   });
   if (existing) return existing;
   return prisma.user.create({
     data: {
-      email: DEMO_USER_EMAIL,
-      name: "Demo User"
+      email: DEFAULT_USER_EMAIL,
+      name: "NeuroAssist User"
     }
   });
 }
@@ -49,7 +49,7 @@ export async function POST(req: Request) {
     const { title, languageSource, languageTarget, mode, segments } =
       parsed.data;
 
-    const user = await getOrCreateDemoUser();
+    const user = await getOrCreateUser();
 
     const durationMs =
       segments.length > 0

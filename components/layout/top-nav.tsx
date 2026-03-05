@@ -36,9 +36,6 @@ export function TopNav() {
             >
               NeuroAssist
             </Link>
-            <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-900 ring-1 ring-emerald-300">
-              Demo mode – translation is mocked
-            </span>
           </div>
           <nav
             aria-label={inApp ? "App navigation" : "Site navigation"}

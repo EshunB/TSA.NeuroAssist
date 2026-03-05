@@ -8,7 +8,7 @@ const settingsLinks = [
   { href: "/app/settings/accessibility", label: "Accessibility", description: "Fonts, contrast, and caption styles." },
   { href: "/app/settings/privacy", label: "Privacy", description: "Data retention and local-only mode." },
   { href: "/app/settings/shortcuts", label: "Shortcuts", description: "Keyboard shortcuts and customization." },
-  { href: "/app/settings/account", label: "Account", description: "Demo profile and identity." }
+  { href: "/app/settings/account", label: "Account", description: "Profile and identity settings." }
 ];
 
 export default function SettingsHubPage() {
@@ -16,7 +16,7 @@ export default function SettingsHubPage() {
     <>
       <PageHeader
         title="Settings"
-        description="Fine-tune how NeuroAssist listens, looks, and behaves. All sections are placeholders in this demo."
+        description="Fine-tune how NeuroAssist listens, looks, and behaves."
       />
       <div className="grid gap-3 md:grid-cols-2">
         {settingsLinks.map((item) => (

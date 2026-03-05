@@ -6,13 +6,12 @@ export default function SettingsAccountPage() {
     <>
       <PageHeader
         title="Account"
-        description="Demo profile information for the local NeuroAssist user."
+        description="Profile information for your local NeuroAssist account."
       />
       <Card className="border-slate-800/80 bg-slate-950/60 text-slate-100">
         <CardContent className="p-4 text-xs text-slate-300">
-          This demo uses a single local &quot;Demo User&quot; behind the
-          scenes. A production setup would connect this page to a real
-          authentication system and user profile settings.
+          This workspace uses a local-first profile. Your data is stored
+          securely in your local instance.
         </CardContent>
       </Card>
     </>
