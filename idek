@@ -1,0 +1,9 @@
+# TSA NeuroAssist
+
+This notebook contains experiments and development work
+for the TSA NeuroAssist project.
+
+Author: Eshun Burge
+Date: March 2026
+
+print("TSA NeuroAssist notebook is running successfully.")
