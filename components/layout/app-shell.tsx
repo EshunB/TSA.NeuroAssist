@@ -1,3 +1,6 @@
+// Main application shell
+// Adds the top navigation and centers the main content column
+// for all internal app pages.
 import { ReactNode } from "react";
 import { TopNav } from "@/components/layout/top-nav";
 

@@ -1,3 +1,6 @@
+// Top navigation bar
+// Shows links to marketing pages or in-app sections (captions, history, settings)
+// depending on whether the user is inside the app.
 "use client";
 
 import Link from "next/link";

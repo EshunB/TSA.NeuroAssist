@@ -1,3 +1,6 @@
+// Live Captions main screen
+// This page listens to the microphone using the browser's Web Speech API
+// and shows large, easy-to-read captions in real time for the user.
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";

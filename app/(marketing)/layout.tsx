@@ -1,3 +1,6 @@
+// Public marketing layout
+// This layout is used for all non-app pages (landing, features, pricing, etc.).
+// It adds the top navigation bar and a simple footer for judges and visitors.
 import type { ReactNode } from "react";
 import { TopNav } from "@/components/layout/top-nav";
 

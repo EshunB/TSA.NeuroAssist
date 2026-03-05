@@ -1,3 +1,6 @@
+// NeuroAssist root layout
+// This file sets up the HTML <html> and <body> for every page,
+// applies global styles, and wraps the app in shared providers.
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode } from "react";
