@@ -70,8 +70,8 @@ http://localhost:3000
 
 ### 5. Using the app
 
-- From the landing page, click **“Open app”** in the top‑right.
-- On the **Dashboard**, follow the quick‑start steps and click **Live Captions**.
+- From the landing page, click Open App in the top‑right.
+- On the Dashboard, follow the quick‑start steps and click Live Captions.
 - Grant microphone access in your browser when prompted.
-- Press **Space** to start/stop listening, and **Ctrl/Cmd + S** to save a session.
+- Press Space to start/stop listening, and Ctrl/Cmd + S to save a session.
 
