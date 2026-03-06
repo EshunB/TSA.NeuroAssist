@@ -231,7 +231,7 @@ export default function LiveCaptionsPage() {
             {isUnsupported && (
               <p className="rounded-md border border-dashed border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
                 Your browser does not support the Web Speech API. Try Chrome on
-                desktop for live captions, or check the Docs for alternatives.
+                desktop for live captions, or check the Docs page for alternatives.
               </p>
             )}
             {hasError && (
