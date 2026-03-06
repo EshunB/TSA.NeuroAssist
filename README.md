@@ -5,10 +5,10 @@ NeuroAssist is designed for hearing‑impaired users and runs locally in your br
 
 ## Features
 
-- **Live Speech‑to‑Text Captions** – Uses the browser’s Web Speech API to turn spoken words into text.
-- **Transcript History** – Save caption sessions, browse them later, and copy or export the text.
-- **Accessibility‑First** – High‑contrast captions, keyboard shortcuts, and a layout focused on readability.
-- **Privacy‑Focused** – Uses a local SQLite database; no external AI APIs or cloud services are required.
+- **Live Speech‑to‑Text Captions** – Neuro Assist uses the browser’s Web Speech API to turn spoken words into text.
+- **Transcript History** – Neuro Assist saves caption sessions, allowing you to browse them later, and copy or export the text.
+- **Accessibility‑First** – Neuro Assist utilizes high‑contrast captions, keyboard shortcuts, and a layout focused on readability.
+- **Privacy‑Focused** – Neuro Assist uses a local SQLite database; no external AI APIs or cloud services are required.
 
 ## How to run NeuroAssist on your laptop
 
